@@ -244,7 +244,7 @@ class Taskbar(tk.Frame):
 
 taskbar = Taskbar(root)
 
-# --- Topbar (macOS-style) ---
+
 topbar = tk.Frame(root, bg="#2e2e2e", height=32)
 topbar.place(relx=0, rely=0, relwidth=1)
 
@@ -262,7 +262,7 @@ def update_clock():
 
 update_clock()
 
-# --- Dock (Bottom like macOS) ---
+
 dock_frame = tk.Frame(root, bg="#1a1a1a", height=70)
 dock_frame.place(relx=0.5, rely=1.0, anchor="s", y=-10)
 
@@ -364,7 +364,7 @@ def open_notes_window():
 
     refresh_list()
 
-# --- File Explorer (unchanged) ---
+# --- File Explorer
 virtual_fs = {
     "root": {
         "Documents": {
@@ -582,7 +582,7 @@ class FileExplorerWindow(tk.Toplevel):
 def open_file_explorer():
     FileExplorerWindow(root)
 
-# --- Settings app (small cleanup) ---
+# --- Settings app
 def open_settings_app():
     settings = tk.Toplevel(root)
     settings.title("Settings - ViewRock OS")
@@ -854,7 +854,7 @@ def open_tictactoe_window():
     reset_btn = tk.Button(cf, text="Reset Game", command=reset_game, bg=t["btn_bg"], fg=t["btn_fg"])
     reset_btn.pack(pady=12)
 
-# --- Whiteboard Pro+Mega App (unchanged) ---
+# --- Whiteboard Pro+Mega App
 def open_whiteboard_pro_mega_window():
     win = AppWindow(root, "Whiteboard Pro+Mega", "🖌️")
     taskbar.add_window(win)
@@ -1587,3 +1587,4 @@ def main():
 if __name__ == "__main__":
     root.withdraw()
     main()
+
